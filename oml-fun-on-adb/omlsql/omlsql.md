@@ -2,7 +2,7 @@
 
 ## Introduction
 
- This lab walks you through the steps to explore, build, evaluate, and score data using OML4SQL from a Time Series example available in OML Notebooks. The data set used in this example is from the SH schema. The SH schema can be readily accessed in Oracle Autonomous Database. Oracle includes the Exponential Smoothing (ESM) algorithm for time series. Exponential smoothing is a forecasting method for time series data. It is a moving average method where exponentially decreasing weights are assigned to past observations.
+ This lab walks you through the steps to explore, build, evaluate, develop and forecast using a time series model with OML4SQL from a Time Series example available in OML Notebooks. The data set used in this example is from the SH schema. The SH schema can be readily accessed in Oracle Autonomous Database. Oracle includes the Exponential Smoothing (ESM) algorithm for time series. Exponential smoothing is a forecasting method for time series data. It is a moving average method where exponentially decreasing weights are assigned to past observations.
 
 Estimated Time: 30 minutes
 
@@ -12,10 +12,10 @@ OML4SQL provides a powerful, state-of-the-art machine learning capability within
 ### Objectives
 
 In this lab, you will:
-* Explore the data using SQL queries
-* Build a Time Series model
-* Evaluate the model using standard diagnostic metrics
-* Access the forecasts from the DM$VP view
+* Explore data using SQL queries
+* Build a time series-based model
+* Evaluate the time series model using standard diagnostic metrics provided by OML4SQL
+* Access the forecasts from the DM$VP model view
 
 ### Prerequisites
 
@@ -25,26 +25,24 @@ This lab assumes you have:
 
 ## Task 1: Examine the Data
 
-1. Click the Cloud menu icon ![Hamburger image](images/hamburger.png) to open the left navigation menu and click **Notebooks**.
+1. Click the Cloud menu icon Cloud menu icon ![Cloud menu icon](images/cloud-menu-icon.png) to open the left navigation menu and click **Notebooks**.
 
-2. The Notebooks page opens with all the notebooks listed in it. Click the **OML4SQL Time Series ESM (1)** notebook to open it.
+2. The Notebooks page opens with all the notebooks listed in it. Click the **OML4SQL Time Series ESM** notebook to open it.
 
-    ![Notebooks listed](images/notebooklist.png)
+    ![ESM Notebooks listed](images/open-esm-notebook.png)
 
-3. The _OML4SQL Time Series ESM (1)_ notebook opens in the notebook editor. Click the gear icon to view and set the interpreter binding order.
+3. The _OML4SQL Time Series ESM_ notebook opens in the notebook editor. Click the gear icon to view and set the interpreter binding order.
 
-4. Click the play icon next to the **OML4SQL Time Series ESM (1)** title to run all paragraphs of the notebook.
+4. Click the play button at the top to run all paragraphs of the notebook.
 
   ![Run all paragraphs](images/timeseries-run-all-paragraphs.png)
 
 
-5. Click **OK** in the confirmation window to run all paragraphs.
+5. Click **Confirm** in the confirmation dialog to run all the paragraphs.
 
     ![Run all paragraphs confirmation](images/timeseries-run-all-confirmation.png)
 
-6. The paragraphs start running one by one and display the status next to the paragraph titles. When the paragraph is running, the status displays **PENDING** and when it finishes, it displays **FINISHED**.
-
-    ![Paragraph running](images/timeseries-para-pending.png)
+6. The paragraphs start running one by one. Hover your cursor over any paragraph to view the status. It shows the time taken to run the paragraph.   
 
     ![Paragraph finished](images/timeseries-para-finished.png)
 
@@ -265,7 +263,7 @@ For a time series model, you use the `DM$VP` view to retrieve the forecasts for 
 	- `round(LOWER,2) LOWER_BOUND, round(UPPER,2) UPPER_BOUND`: Specifies the lower and upper confidence levels rounded to two decimal places.
 
 2. To see a visual representation of the predictions in OML Notebooks, run the same query above without ```DESC``` in the ```ORDER BY``` clause. Click the Line Chart graph and apply the following settings:
-Click **settings** and drag `DATE_ID` to **keys** and `FORECASTED_SOLD`, `ACTUAL_SOLD`, `LOWER_BOUND`, and `UPPER_BOUND` to **values**. By default, the columns in the **values** field show `(sum)`. For example,  `ACTUAL_SOLD (sum)`. Click the column name and change it to `(avg)`. Change all the column names in the **values** field to show `(avg)`.
+Click on the **Settings** icon ![settings icon](images/settings-icon.png). In the settings dialog, click on **Series to Show** and click `FORECASTED_SOLD`, `ACTUAL_SOLD`, `LOWER_BOUND`, and `UPPER_BOUND`. In the **Group_by** field, select `DATE_ID`. In the **Aggregate Duplicates** field, click on the drop down menu and select `Average`. Click on the close icon X to exit the dialog.   
 
     ```
     <copy>
@@ -280,9 +278,9 @@ Click **settings** and drag `DATE_ID` to **keys** and `FORECASTED_SOLD`, `ACTUAL
 
   ![Line Chart icon](images/timeseries-line-chart.png)
 
-  ![Displays the Line Graph settings](images/timeseries-graph-settings.png)
+  ![Settings of the time series forecast](images/timeseries-graph-settings-new.png)
 
-  ![A visual representation of the forecast](images/timeseries-forecast-graph.png)
+  ![A visual representation of the forecast](images/timeseries-forecast-graph-new.png)
 
 This completes the prediction step. The model has successfully forecast sales for the next four quarters. You may now **proceed to the next lab**.
 
@@ -297,4 +295,4 @@ This completes the prediction step. The model has successfully forecast sales fo
 
 * **Author** - Sarika Surampudi, Principal User Assistance Developer, Oracle Database User Assistance Development
 * **Contributors** -  Mark Hornick, Sr. Director, Data Science and Oracle Machine Learning Product Management; Sherry LaMonica, Consulting Member of Technical Staff, Machine Learning;  Marcos Arancibia, Senior Principal Product Manager, Machine Learning
-* **Last Updated By/Date** - Marcos Arancibia, March 2023
+* **Last Updated By/Date** - Sarika Surampudi, January 2025

@@ -1,17 +1,21 @@
-# Create Projects and Workspaces in Oracle Machine Learning Notebooks
+# Create Projects and Workspaces in Oracle Machine Learning User Interface
 ## Introduction
 
-This lab walks you through the steps to create a project and a workspace in Oracle Machine Learning Notebooks.
+This lab walks you through the steps to create a project and a workspace in Oracle Machine Learning User Interface (UI).
 
->**Note:** The initial workspaces and the default project are created by the Oracle Machine Learning service automatically when you log in to Oracle Machine Learning Notebooks for the first time. The term default applies to the last project that you work on, and it is stored in the browser cache. If you clear the cache, then there would be no default project selected. Then you must select a project to work with notebooks.
+### About Projects and Workspaces
 
-A project is a container for storing your notebooks and other objects such as dashboards and so on. A workspace is a virtual space where your projects reside, and multiple users with the appropriate permission type can work on different projects. While you may own many projects, other workspaces and projects may be shared with you.
+A project is a logical grouping of notebooks and experiments within a workspace. A workspace is a virtual space where your projects reside, and multiple users with the appropriate permission type can work on different projects. While you may own many projects, other workspaces and projects may be shared with you. Permissions are granted on workspaces, and not on projects.
+
+>**Note:** The initial workspaces and the default project are created by the Oracle Machine Learning service automatically when you log in to Oracle Machine Learning UI for the first time. The term default applies to the last project that you work on, and it is stored in the browser cache. If you clear the cache, then there would be no default project selected. Then you must select a project to work with notebooks.
+
+### Objectives
 
 This lab explains the steps to
 
 * Create an Oracle Machine Learning user
 * Sign into Oracle Machine Learning user interface
-* Create your own project, and optionally your workspace.
+* Create a new project, and a workspace
 
 ### Estimated Time:
 This lab takes approximately 10 minutes to complete.
@@ -27,11 +31,22 @@ Access to your Oracle Machine Learning Notebooks account
 
 ## Task 2: Sign into Oracle Machine Learning User Interface
 
+<if type="freetier">
+
 [](include:oml-sign-into-oml.md)
 
-## Task 3: Create Project in Oracle Machine Learning Notebooks
+</if>
 
-A project is a container for your notebooks, and a workspace is a container for your projects. While you may own many projects, other workspaces and projects may be shared with you.
+<if type="livelabs">
+
+[](include:oml-sign-into-oml-livelabs.md)
+
+</if>
+
+
+## Task 3: Create Project in Oracle Machine Learning UI
+
+A project is a container for your notebooks and experiments, and a workspace is a container for your projects. While you may own many projects, other workspaces and projects may be shared with you.
 The initial workspace and the default project is created by the Oracle Machine Learning service automatically when you log in to Oracle Machine Learning for the first time. 
 
 In this task, you will create a project by the name _Project A_ in _OMLUSER Workspace_.  
@@ -65,52 +80,52 @@ To create a new project:
 3. Click **OK**. This completes the task of creating a project and assigning it to a workspace. In this example, the newly created project is _Project A_ and the assigned workspace is _OMLUSER Workspace_.
 
 
-## Task 4: Create Workspace in Oracle Machine Learning Notebooks
+## Task 4: Create Workspace in Oracle Machine Learning UI
 
 You can create and manage new projects and workspaces, provide access to your workspace, manage permissions for users, and edit and delete workspace.
 The Workspaces page comprises two sections, one for workspaces and the other for projects.
 
 In this task, you will create:
-* A workspace by the name _Workspace A_
-* A project by the name _Project B_ in _Workspace A_
+* A workspace by the name _Workspace B_
+* A project by the name _Project B_ in _Workspace B_
 
 
 To create a workspace:
 
 1. On the top right corner of your home page, click the down arrow next to the Project field, and click **Manage Workspaces.** The Workspaces page opens. On the Workspaces page, you can create and manage workspaces and projects.
 
-  ![manage-workspaces.png](images/manage-workspaces.png "Manage Workspaces")
+  ![Screenshot of the Manage Workspace page](images/manage-workspaces.png "Manage Workspaces")
 
 
 2. On the upper section for workspace, click **Create.** The Create Workspace dialog opens.
 
-  ![workspace-a.png](images/workspaces-create.png "Create Workspace")
+  ![Screenshot shows the Create button on the Workspace page](images/workspaces-create.png "Create Workspace")
 
-3. In the Create Workspace dialog box, enter `Workspace A` in the **Name** field and click **OK.**
+3. In the Create Workspace dialog box, enter `Workspace B` in the **Name** field and click **OK.**
 
-  ![workspace-a.png](images/workspace-a.png "Workspace A")
+  ![Screenshot of the Create Workspace dialog](images/workspace-b.png "Workspace B")
 
 	>**Note:** In the Default project details, the project _OMLUSER Project_ is present. This is the project that is created by default for OMLUSER workspace. Note that you are signed in as OMLUSER.  
 
-4. Now, let's create a project in Workspace A. On the Workspace page, click **Workspace A** and then in the lower pane for projects, click **Create.** This will create the project in Workspace A. The Create Project dialog opens.
+4. Now, let's create a project in Workspace B. On the Workspace page, click **Workspace B** and then in the lower pane for projects, click **Create.** This will create the project in Workspace B. The Create Project dialog opens.
 
-  ![create-project-b.png](images/create-project-b.png "Create Project dialog")
+  ![Screenshot shows the Create button on the Projects section](images/create-project-b.png "Create Project dialog")
 
 5. In the Create Project dialog, enter `Project B` in the **Name** field, and click **OK.**
 
-	>**Note:** In the Workspace field, Workspace A is selected.
+	>**Note:** In the Workspace field, Workspace B is selected.
 
-	![project-b-create.png](images/project-b-create.png "Create Project B")
+	![Screenshot shows the Create Project dialog](images/project-b-create.png "Create Project B")
 
-6. This completes the task of creating Project B in Workspace A, and brings you back to the Manage Workspaces page.
+6. This completes the task of creating Project B in Workspace B, and brings you back to the Manage Workspaces page.
 
 
-7. On the Manage Workspaces page, you can now view the projects that are created for the two workspaces - OMLUSER Workspace and Workspace A, as shown in the screenshot here:
+7. On the Manage Workspaces page, you can now view the projects that are created for the two workspaces - _OMLUSER Workspace_ and _Workspace B_, as shown in the screenshot here:
 
-	* In the Workspaces section, click USER1 Workspace. In the lower pane _Projects in USER1 Workspace_, you can view Project A and the default USER1 Project.
+	* In the Workspaces section, click **OMLUSER Workspace.** In the lower pane **Projects in OMLUSER Workspace**, you can view _Project A_ and the default _OMLUSER Project_.
 	![Projects in OMLUSER workspace.png](images/projects-omluser-workspace.png "")
-	* In the Workspaces section, click Workspace A. In the lower pane _Projects in Workspace A_, you can see that Project B and the default `OMLUSER` Project are listed.
-	![Projects in OMLUSER workspace.png](images/projects-in-workspace-a.png "")
+	* In the Workspaces section, click **Workspace B.** In the lower pane **Projects in Workspace B**, you can see that _Project B_ and the default _OMLUSER Project_ are listed.
+	![Projects in workspace B.png](images/projects-in-workspace-b.png "")
 
 	>**Note:** `OMLUSER Project` is the default project that is created as part of `OMLUSER Workspace` creation. Because you are signed in as `OMLUSER`, the default workspace is `OMLUSER Workspace` and the default project is `OMLUSER Project`.  
 
@@ -125,4 +140,4 @@ You may now **proceed to the next lab.**
 
 * **Author** : Mark Hornick, Sr. Director, Data Science / Machine Learning PM; Moitreyee Hazarika, Principal User Assistance Developer, Database User Assistance Development
 
-* **Last Updated By/Date**: Moitreyee Hazarika, May 2024
+* **Last Updated By/Date**: Moitreyee Hazarika, February 2025

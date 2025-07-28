@@ -25,15 +25,16 @@ You create notebooks in Oracle Machine Learning UI. You can access Oracle Machin
     ![Live Labs My Reservations](images/ll-launch-workshop.png " ")
 
 2. In the window with instructions that opens, click on the **View Login Info** at the **top left** of the page, and then click on the **Launch OCI** button.  Make sure to click on the **Copy Password** button since you will need it to login.
-    ![Live Labs Launch OCI](images/ll-view-login-info.png " ")
+    ![Live Labs Launch OCI](images/ll-view-login-info-dk.png " ")
 
 3. Login into OCI with the user provided (it should be filled automatically) and the password you copied.  
-    ![Live Labs Login into OCI](images/ll-login-oci.png " ")
+    ![Live Labs Identity domain into OCI](images/ll-identity-domain-oci-dk.png " ")
+    ![Live Labs Login into OCI](images/ll-login-oci-dk.png " ")
 
     > **Note:** The first time you login to OCI, you will be asked to reset your password.
 
-4. When you are in OCI, click the left navigation pane on the upper left corner, and click **Autonomous Data Warehouse** under **Oracle Database**.  
-    ![Autonomous Database under Oracle Database](images/database-adw.png " ")
+4. When you are in OCI, click the left navigation pane on the upper left corner, and click **Autonomous Database** under **Oracle Database**.  
+    ![Autonomous Database under Oracle Database](images/database-adw-rw.png " ")
 
 </if>
 
@@ -49,81 +50,81 @@ You create notebooks in Oracle Machine Learning UI. You can access Oracle Machin
 
     > **Note:** The first time you login to OCI, you will be asked to reset your password.
 
-4. When you are in OCI, click the left navigation pane on the upper left corner, and click **Autonomous Data Warehouse** under **Oracle Database**.  
-    ![Autonomous Database under Oracle Database](images/database-adw.png " ")
+4. When you are in OCI, click the left navigation pane on the upper left corner, and click **Autonomous Database** under **Oracle Database**.  
+    ![Autonomous Database under Oracle Database](images/database-adw-rw.png " ")
 
 </if>
 
 <if type="freetier">
 
-1. Sign into your OCI account, click the left navigation pane on the upper left corner, and click **Autonomous Data Warehouse** under **Oracle Database**.  
+1. Sign into your OCI account, click the left navigation pane on the upper left corner, and click **Autonomous Database** under **Oracle Database**.  
 
      > **Note:** It is possible to select a different type of Autonomous Database if you previously provisioned a different one and have created OML Users for it, since OML is available in AJD and ATP as well.
 
-    ![Autonomous Database under Oracle Database](images/database-adw.png " ")
+    ![Autonomous Database under Oracle Database](images/database-adw-rw.png " ")
 
 </if>
 
 
 <if type="freetier-ocw23">
 
-1. Sign into your OCI account, click the left navigation pane on the upper left corner, and click **Autonomous Data Warehouse** under **Oracle Database**.  
+1. Sign into your OCI account, click the left navigation pane on the upper left corner, and click **Autonomous Database** under **Oracle Database**.  
 
      > **Note:** It is possible to select a different type of Autonomous Database if you previously provisioned a different one and have created OML Users for it, since OML is available in AJD and ATP as well.
 
-    ![Autonomous Database under Oracle Database](images/database-adw.png " ")
+    ![Autonomous Database under Oracle Database](images/database-adw-rw.png " ")
 
 </if>
 
-2. The Autonomous Database dashboard lists all the databases that are provisioned in the tenancy. Select the compartment corresponding to the <if type="livelabs">provisioned **Live Labs** instance (the Compartment name is shown in the Login info for your reservation, as shown in Task 2).  Click on the Autonomous Database with your unique **Display Name ADWXXXXX** shown in Task 2</if><if type="livelabs-ocw23">provisioned **Live Labs** instance (the Compartment name is shown in the Login info for your reservation, as shown in Task 2).  Click on the Autonomous Database with your unique **Display Name ADWXXXXX** shown in Task 2</if><if type="freetier">previously provisioned instance, and click the Oracle Autonomous Database name (in the example below, **OML_LABS**)</if><if type="freetier-ocw23">previously provisioned instance, and click the Oracle Autonomous Database name (in the example below, **OML_LABS**)</if>.
+2. The Autonomous Database dashboard lists all the databases that are provisioned in the tenancy. Select the compartment corresponding to the <if type="livelabs">provisioned **Live Labs** instance (the Compartment name is shown in the Login info for your reservation, as shown in Task 2).  Click on the Autonomous Database with your unique **Display Name ADWXXXXX** shown in Task 2</if><if type="livelabs-ocw23">provisioned **Live Labs** instance (the Compartment name is shown in the Login info for your reservation, as shown in Task 2).  Click on the Autonomous Database with your unique **Display Name ADWXXXXX** shown in Task 2</if><if type="freetier">previously provisioned instance, and click the Oracle Autonomous Database name (in the example below, **OMLLABS**)</if><if type="freetier-ocw23">previously provisioned instance, and click the Oracle Autonomous Database name (in the example below, **OMLLABS**)</if>.
 
 <if type="freetier">
-     ![Oracle Autonomous Database instances](images/provisioned-adb.png " ")</if>
+     ![Oracle Autonomous Database instances](images/provisioned-adb-rw.png " ")</if>
 <if type="freetier-ocw23">
-     ![Oracle Autonomous Database instances](images/provisioned-adb.png " ")</if>
+     ![Oracle Autonomous Database instances](images/provisioned-adb-rw.png " ")</if>
 <if type="livelabs">
-     ![Oracle Autonomous Database instances](images/ll-adb-listing.png " ")</if>
+     ![Oracle Autonomous Database instances](images/ll-adb-listing-rw.png " ")</if>
 <if type="livelabs-ocw23">
-     ![Oracle Autonomous Database instances](images/ll-adb-listing.png " ")</if>
+     ![Oracle Autonomous Database instances](images/ll-adb-listing-rw.png " ")</if>
 
 3. On the Autonomous Database details page, click **Database Actions** and then select **View all Database Actions**.
 
-	  ![Database Actions button in ADB Console](images/view-all-database-actions.png " ")
+	  ![Database Actions button in ADB Console](images/view-all-database-actions-rw.png " ")
 
      Before you get to the Oracle Database Actions Launchpad page, you might be asked to login, depending on the browser you are using.  If this is the case make sure to enter **ADMIN** for the user, and the <if type="freetier">password you have given the ADMIN user</if><if type="freetier-ocw23">password you have given the ADMIN user</if><if type="livelabs">password shown in the **View Login Info** in Task 1, Step 2 (you can click on the **Copy Password** button)</if><if type="livelabs-ocw23">password shown in the **View Login Info** in Task 1, Step 2 (you can click on the **Copy Password** button)</if>.
    
     ![ADB login into Database Actions](images/login-to-actions.png " ")
 
 4. On the Database Actions page, go to the **Development** section and click **Oracle Machine Learning**. This opens the Oracle Machine Learning Sign In page.
-    ![OML in Database Actions Launchpad](images/adb-dev-oml.png " ")
+    ![OML in Database Actions Launchpad](images/adb-dev-oml-rw.png " ")
 
      > **Note:** There is also a way to access directly the URL for the Oracle Machine Learning login page. It is under the ADB Console **Tool configuration** Tab, as illustrated below.  
 	 
-	 ![ADB Console tool configuration tab](images/adb-console-tool.png " ")
+	 ![ADB Console tool configuration tab](images/adb-console-tool-rw.png " ")
 	 
-	 In there you can scroll down to find and copy the direct URL to login into the OML UI.
+	 In there you can scroll down to **Oracle Machine Learning user interface** section and **copy** the direct URL to login into the OML UI.
 
-	 ![OML option in ADB Console tool](images/oml-ui-tool-adb-console.png " ")
+	 ![OML option in ADB Console tool](images/oml-ui-tool-adb-console-rw.png " ")
 
-	  > **Note:** If you are are using a **Paid Account** and deployed a **Paid Autonomous Database** you would also see an additional column that show any customizations made to the compute power available specifically to OML jobs, along with the  `Max idle time` defined to release those resources.
-	   ![OML option in ADB Console tool Paid Account](images/oml-ui-tool-adb-console-paid.png " ")
+	  <!-- > **Note:** If you are are using a **Paid Account** and deployed a **Paid Autonomous Database** you would also see an additional column that show any customizations made to the compute power available specifically to OML jobs, along with the  `Max idle time` defined to release those resources.
+	   ![OML option in ADB Console tool Paid Account](images/oml-ui-tool-adb-console-paid.png " ") -->
 
 5. You should be in the Sign In page for OML. <if type="livelabs">Sign in with the **`OMLUSER`** using the password **`AAbbcc123456`**. </if><if type="livelabs-ocw23">Sign in with the **`OMLUSER`** using the password **`AAbbcc123456`**. </if><if type="freetier">Enter the **`OMLUSER`** credentials using the password that you used earlier when creating the users. Then click the blue **Sign in** button.</if><if type="freetier-ocw23">Enter the **`OMLUSER`** credentials using the password that you used earlier when creating the users. Then click the blue **Sign in** button.</if>
 
     ![Oracle Machine Learning Notebooks Sign-in page](images/omluser-signin.png " ")
 
-6. Once in the OML UI, click on the three-dashes menu button at the top left.  The main menu will slide open from the left.  Select the **Notebooks EA** in the Quick Actions menu.
+6. Once in the OML UI, click on the Cloud menu icon Cloud menu icon ![](images/cloud-menu-icon.png) on the top left corner of the homepage.  The left navigation menu will slide open from the left.  Click **Notebooks** on the left navigation menu. You may also click **Notebooks** in the Quick Actions menu.
 
-    ![Oracle Machine Learning home page](images/oml-notebooks-ea-homepage.png " ")
+    ![Oracle Machine Learning home page](images/oml-notebooks-homepage-rw.png " ")
 
 <if type="livelabs">
     > **Note:** There is another option to get straight into OML UI from the Live Labs reservation.  When you click on **View Login Info**, you can click on the **OML Notebooks** button to go to the OML UI.
-    ![Oracle Machine Learning UI from Live Labs](images/ll-oml-ui-link.png " ")
+    ![Oracle Machine Learning UI from Live Labs](images/ll-oml-ui-link-dk.png " ")
 
 </if>
 <if type="livelabs-ocw23">
     > **Note:** There is another option to get straight into OML UI from the Live Labs reservation.  When you click on **View Login Info**, you can click on the **OML Notebooks** button to go to the OML UI.
-    ![Oracle Machine Learning UI from Live Labs](images/ll-oml-ui-link.png " ")
+    ![Oracle Machine Learning UI from Live Labs](images/ll-oml-ui-link-dk.png " ")
 
 </if>
 ## Task 2: Get familiar with OML Notebooks
@@ -147,8 +148,8 @@ We will now download a set of Notebooks that will be used throughout the worksho
 
 > **NOTE:** If you have problems with downloading and extracting the ZIP file, please [**CLICK HERE** to download the "Lab 1 - Get Started with OML4Py on Autonomous Database" notebook in DSNB format](<./../notebooks/Lab 1 - Get Started with OML4Py on Autonomous Database.dsnb?download=1>) which contains the notebook version of Lab1, save it to your local machine and import it as illustrated below.
 
-  To import the downloaded notebook files into **OML Notebooks EA**:
-  - Go to the **Notebooks EA** page, and click **Import**.  
+  To import the downloaded notebook files into **OML Notebooks**:
+  - Go to the **Notebooks** page, and click **Import**.  
 
   ![OML Notebooks import](images/click-on-import-notebook.png " ")
 
@@ -251,7 +252,11 @@ We will now download a set of Notebooks that will be used throughout the worksho
 
 > **NOTE:** If you have problems with downloading and extracting the ZIP file, please [**CLICK HERE** to download the "Lab 1a - Run Me First - OML4Py table creation and grants" notebook DSNB file](<./../notebooks/Lab 1a - Run Me First - OML4Py table creation and grants.dsnb?download=1>). This notebook contains the scripts for creating tables and views, and granting the required access. Save it to your local machine and import it like illustrated in **Task 2, Step 1**.
 
-2. Go back to the main Notebooks listing by clicking on the "hamburger" menu (the three lines) on the upper left of the screen, and then select **Notebooks EA**. Click the **Lab 1a** notebook to view it.
+2. Go back to the main Notebooks page by clicking on the Cloud menu icon ![](images/cloud-menu-icon.png) on the upper left corner of the page to open the left navigation menu.  
+   
+   ![Go to main Notebooks](images/go-back-to-notebooks-rw.png " ")
+3. On the left navigation menu, click **Notebooks**.   
+
 <if type="freetier"> 
  ![Main Menu clicking Lab 1A](images/click-on-lab1a-ft.png " ")
  </if>
@@ -284,9 +289,8 @@ You can now *proceed to the next lab*.
 
 * [Get Started with Oracle Machine Learning for Python](https://docs.oracle.com/en/database/oracle/machine-learning/oml4py/2/)
 * [Get Started with Oracle Machine Learning Notebooks](https://docs.oracle.com/en/database/oracle/machine-learning/oml-notebooks/)
-* [Oracle Machine Learning Notebooks - Early Adopter](https://docs.oracle.com/en/database/oracle/machine-learning/oml-notebooks/omlug/get-started-notebooks-ea-data-analysis-and-data-visualization.html#GUID-B309C607-2232-43E2-B4A1-655DB295B90B)
 
 ## Acknowledgements
-* **Authors** - Marcos Arancibia, Product Manager, Machine Learning; Moitreyee Hazarika, Principal User Assistance Developer
+* **Authors** - Marcos Arancibia, Product Manager, Machine Learning; Moitreyee Hazarika, Principal User Assistance Developer; Dhanish Kumar, Senior Member of Technical Staff
 * **Contributors** -  Mark Hornick, Senior Director, Data Science and Machine Learning; Sherry LaMonica, Principal Member of Tech Staff, Machine Learning; Jie Liu, Data Scientist
-* **Last Updated By/Date** - Moitreyee Hazarika, May 2024
+* **Last Updated By/Date** - Marcos Arancibia, August 2023, Moitreyee Hazarika, June 2024, Dhanish Kumar, July 2025

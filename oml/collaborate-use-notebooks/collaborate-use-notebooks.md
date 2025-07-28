@@ -1,12 +1,25 @@
-# Collaborate in Oracle Machine Learning Notebooks
+# Collaborate in Oracle Machine Learning User Interface
 ## Introduction
 
 This lab shows you how to two or more users can collaborate and share SQL notebooks with other Oracle Machine Learning Notebooks users.
+
+### About Collaboration in Oracle Machine Learning User Interface
+
+You can collaborate with other users in Oracle Machine Learning Notebooks by granting permissions to access your workspace. Your workspace contains your projects, and the projects contain notebooks. Oracle Machine Learning Notebooks allows three types of permissions. By granting different types of permissions such as Manager, Developer, and Viewer, you can allow other user to view your workspace and perform different tasks in your projects and notebooks such as edit, create, update, delete, run, view notebooks and so on.
+
+>**Note**: If you grant the permission type **Manager** or **Developer** , then the user can also drop tables, create tables, and run any scripts at any time on your account. The user with Viewer permission type can only view your notebooks, and is not authorized to run or make any changes to your notebooks.
 
 A notebook is a web-based interface for data visualization, machine learning, and collaboration.
 
 ### Estimated Time
 This lab takes approximately 15 minutes to complete.
+
+### Objectives
+
+In this lab, you will learn how to collaborate with other OML users by:
+* Granting permission to access your workspace and projects
+* Using the export and import options
+* Using the Oracle Machine Learning templates
 
 ### Prerequisites
 
@@ -18,10 +31,6 @@ This lab takes approximately 15 minutes to complete.
 
 
 ## Task 1: Collaborate by Granting Access to Projects of Another User
-
-You can collaborate with other users in Oracle Machine Learning Notebooks by granting permissions to access your workspace. Your workspace contains your projects, and the projects contain notebooks. Oracle Machine Learning Notebooks allows three types of permissions. By granting different types of permissions such as Manager, Developer, and Viewer, you can allow other user to view your workspace and perform different tasks in your projects and notebooks such as edit, create, update, delete, run, view notebooks and so on.
-
->**Note**: If you grant the permission type **Manager** or **Developer** , then the user can also drop tables, create tables, and run any scripts at any time on your account. The user with Viewer permission type can only view your notebooks, and is not authorized to run or make any changes to your notebooks.
 
 This use case demonstrates how two Oracle Machine Learning Notebooks users - `OMLUSER` and `OMLUSER2` collaborate to share notebooks by granting permission to access notebooks in **OMLUSER Project** under **OMLUSER Workspace**. For each user, a workspace along with a project are created by default, at the time of user creation. In this tutorial the notebook that `OMLUSER2` accesses and edits, is in **OMLUSER Project**, which is the default project owned by `OMLUSER`.
 
@@ -41,7 +50,7 @@ This use case demonstrates how:
 ## Task 1.1: OMLUSER Grants DEVELOPER Permission to OMLUSER2
 
 1. Sign into Oracle Machine Learning user interface with `OMLUSER` credentials.
-2. Go to the Notebooks page of `OMLUSER` and view the list of notebooks that are available in **OMLUSER Project** under **USER Workspace**.
+2. Go to the Notebooks page of `OMLUSER` and view the list of notebooks that are available in **OMLUSER Project** under **OMLUSER Workspace**.
 
     ![omluser-notebooks.png](images/omluser-notebooks.png "omluser notebooks")
 
@@ -78,7 +87,7 @@ The message _Permissions have been updated successfully_ is displayed.
 
     ![delete-permissions.png](images/delete-permissions.png "delete permissions")
 
-## Task 1.2: OMLUSER2 Accesses Project Shared by OMLUSER
+## Task 1.2: OMLUSER2 Accesses Projects Shared by OMLUSER
 
 1. Sign in to the Oracle Machine Learning user interface using the `OMLUSER2` credentials.
 2. On the top right corner, click **OMLUSER2 Project** [OMLUSER2 Project... drop-down list. USER2 Project is the default project under OMLUSER2 Workspace. Click **Select Project**.
@@ -106,13 +115,13 @@ The projects under OMLUSER Workspace are listed. To access the notebooks under O
 
     ![notebooks-user2.png](images/notebooks-user2.png "notebooks user2")
 
-6. On the `OMLUSER2` Notebooks page, you can now see all the notebooks that are owned by `OMLUSER` in the **OMLUSER Project**, which in **OMLUSER Workspace**. This is the same list of notebooks that is available in the **OMLUSER Project** that you created in Lab 2 of this workshop. Since `OMLUSER2` has been granted the `DEVELOPER` permission, therefore, as `OMLUSER2` you can click any of these notebooks to open, edit, and run the notebooks. As `OMLUSER2`, you can also create a new notebook in **USER Project**.
+6. On the `OMLUSER2` Notebooks page, you can now see all the notebooks that are owned by `OMLUSER` in the **OMLUSER Project**, which is in **OMLUSER Workspace**. This is the same list of notebooks that is available in the **OMLUSER Project** that you created in Lab 2 of this workshop. Since `OMLUSER2` has been granted the `DEVELOPER` permission, therefore, as `OMLUSER2` you can click any of these notebooks to open, edit, and run the notebooks. As `OMLUSER2`, you can also create a new notebook in **USER Project**.
 
     ![user1-notes-for-user2.png](images/user1-notes-for-user2.png "user1 notes for user2")
 
 ## Task 1.3: OMLUSER2 Edits Notebook Shared by OMLUSER
 
-1. While signed in as `OMLUSER2`, go to the **Notebooks EA** page and click the **Test Notebook EA** notebook to open it. Scroll down to the bottom and click the **Add sql Paragraph** icon. 
+1. While signed in as `OMLUSER2`, go to the **Notebooks** page and click the **Test Notebook** notebook to open it. Scroll down to the bottom and click the **Add sql Paragraph** icon. 
 
      ![add-sql-para.png](images/add-sql-para.png "")
 
@@ -127,26 +136,26 @@ The projects under OMLUSER Workspace are listed. To access the notebooks under O
 
      ![SQL command in Test Notebook EA](images/sql-test-notebook-ea.png "")
 
-4. Click the Run icon to run the paragraph to render the data in a table. 
+3. Click the Run icon to run the paragraph to render the data in a table. 
 
-     ![Run Test Notebook EA](images/run-test-notebook-ea.png "")
+     ![Run Test Notebook](images/run-test-notebook-ea.png "")
 
-     >**Note:** You have edited and run the _Test Notebook EA_ which is present in the **OMLUSER Project** in **OMLUSER Workspace**, while signed in in as `OMLUSER2`.  
+     >**Note:** You have edited and run the _Test Notebook_ which is present in the **OMLUSER Project** in **OMLUSER Workspace**, while signed in in as `OMLUSER2`.  
 
-5. Sign out of the Oracle Machine Learning user interface.
+4. Sign out of the Oracle Machine Learning user interface.
 
 ## Task 1.4: OMLUSER Collaborates with OMLUSER2 on the Same Notebook in Real-Time
 This section shows how `OMLUSER` and `OMLUSER2` collaborate on the Sales Note notebook in real-time. Both users have the Sales Note notebook opened in different browsers, and they work on it simultaneously. The changes made by the users are dynamically reflected in the notebook in real-time. To try this example on the same client machine, for example, your laptop, use two different types of browsers such as Chrome and Firefox to enable two different logins. To see changes dynamically, try to position these two browser windows side by side on your screen so that both views are visible.
 
-1. Sign in to the Oracle Machine Learning instance as `OMLUSER` in Mozilla Firefox browser. Click **Notebooks** on the home page to view the list of notebooks. Observe that the entry for **Updated By** column for **Test Notebook EA** notebook shows `OMLUSER2`.
+1. Sign in to the Oracle Machine Learning instance as `OMLUSER` in Mozilla Firefox browser. Click **Notebooks** on the home page to view the list of notebooks. Observe that the entry for **Updated By** column for **Test Notebook** notebook shows `OMLUSER2`.
 
      ![user1-views-notebooks.png](images/user1-views-notebooks.png "user1 views notebooks")
 
-2. Click **Test Notebook EA** to open and view the notebook. The changes that are made by `OMLUSER2` are visible to `OMLUSER` when you open the same notebook in **OMLUSER Project** under **OMLUSER Workspace**.
+2. Click **Test Notebook** to open and view the notebook. The changes that are made by `OMLUSER2` are visible to `OMLUSER` when you open the same notebook in **OMLUSER Project** under **OMLUSER Workspace**.
 
     ![user1-views-user2-edits.png](images/user1-views-user2-edits.png "user1 views user2 edits")
 
-3. While signed in as `OMLUSER`, edit the **Test Notebook EA** by adding the following and click **Run**. 
+3. While signed in as `OMLUSER`, edit the **Test Notebook** by adding the following and click **Run**. 
 
     
     ```
@@ -169,7 +178,7 @@ This section shows how `OMLUSER` and `OMLUSER2` collaborate on the Sales Note no
     Click **Run**. The **Sales Note** notebook now displays refined data accordingly. Note the date and time.
     ![sales-note-edit-user2.png](images/omluser2-views-nb-chrome.png "sales note edit user2")
 
-5. Now, go to Firebox browser and view the **Test Notebook EA** notebook as `OMLUSER`. The change made by `OMLUSER2` is dynamically reflected in Firefox where you are accessing the notebook as `OMLUSER`, as shown in the screenshot. This is how two or more users can collaborate in real-time on the same notebook.
+5. Now, go to Firebox browser and view the **Test Notebook** notebook as `OMLUSER`. The change made by `OMLUSER2` is dynamically reflected in Firefox where you are accessing the notebook as `OMLUSER`, as shown in the screenshot. This is how two or more users can collaborate in real-time on the same notebook.
  Note that you are signed in as `OMLUSER` in Firefox and as `OMLUSER` in Chrome.
     ![user1-views-sales.png](images/omluser-views-nb-firefox.png "user1 views sales")
 
@@ -183,7 +192,7 @@ You can export a notebook in two ways:
 
     * Select the notebook that you want to export, and click **Export**.
       ![Export option](images/export-option-nb-page.png "user1 views sales")   
-    * In the Export Notebook dialog, for Notebooks to export, click **Selected**. Select the format in which you want to export the notebook, and then click **OK**.
+    * In the Export Notebook dialog, for Notebooks to export, click **Selected**. Select the format in which you want to export the notebook, and then click *Export**.
       ![Export dialog](images/export-nb-dialog1.png "user1 views sales")  
 
 2. From the Notebook editor: 
@@ -194,7 +203,7 @@ You can export a notebook in two ways:
     * In the Export Notebook dialog, select your export preferences, and click **Export**.   
       ![Export dialog 2](images/export-nb-dialog2.png "export notebook option") 
       You can export the notebook as a 
-        * `.dsnb` file (Early Adopter notebook), 
+        * `.dsnb` file (Notebook) 
         * `.zpln` file (Zeppelin notebook) and 
         * `.ipynb` file (Jupyter notebook). 
         
@@ -222,11 +231,11 @@ You can share a notebook by saving an existing notebook as a template in My Libr
         - Select **Shared** if you want to save and share this notebook. The **Shared** template is visible to all users of the system within the scope of the tenant.
 
 3. Once the notebook is successfully saved as a template in the designated location, the message appears. On the message, you have the option to open the notebook directly by clicking **Open template**.
-    ![Message](images/template-message.png "templates")
+    ![Screenshot shows the Message about successful creation of the notebook from template](images/template-message.png "templates")
 
 4. You can also view the template in the **Personal** or **Shared** location, whereever it is saved. Click on the Cloud menu icon to open the left navigation pane, click **Templates** and then click **Shared** to view this notebook. 
 
-    ![Shared template](images/shared-template.png "")
+    ![Screenshot shows the Shared template page](images/shared-template.png "")
 
 >**Note:** Notebook templates under **Examples** are provided by Oracle and are visible to all tenants. Users cannot add notebooks to the Examples template.     
 
@@ -236,4 +245,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * **Author** : Mark Hornick, Sr. Director, Data Science / Machine Learning PM; Moitreyee Hazarika, Principal User Assistance Developer, Database User Assistance Development
 
-* **Last Updated By/Date**: Moitreyee Hazarika, March 2024
+* **Last Updated By/Date**: Moitreyee Hazarika, February 2025
